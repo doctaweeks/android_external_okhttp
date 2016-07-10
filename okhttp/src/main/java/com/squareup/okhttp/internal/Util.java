@@ -288,4 +288,11 @@ public final class Util {
     return e.getCause() != null && e.getMessage() != null
         && e.getMessage().contains("getsockname failed");
   }
+
+  public static <T> int indexOf(T[] array, T value) {
+    for (int i = 0, size = array.length; i < size; i++) {
+      if (equal(array[i], value)) return i;
+    }
+    return -1;
+  }
 }
